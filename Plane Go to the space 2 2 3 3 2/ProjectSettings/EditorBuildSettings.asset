@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/LoadScene.unity
+    guid: 89051230a45c9463fb74cdb967f0a86c
+  - enabled: 1
+    path: Assets/Scenes/Gamemenu.unity
+    guid: 434a45ea2a9a04c519e3455598a04737
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/Cutscene1.unity
+    guid: 959549482df494bcba75d82a52f17ef0
+  - enabled: 1
+    path: Assets/Scenes/Bitcoin.unity
+    guid: 07ac0cfae181843f9a699f5f383d589b
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/Cutscene2.unity
+    guid: 34b1602c7aa914caca4c351dcb635485
+  - enabled: 1
+    path: Assets/Scenes/ChooseLevelScene.unity
+    guid: 2da6680f4f4154a02a1f0dcfd0a9e4e5
+  - enabled: 1
+    path: Assets/Scenes/UpgradeScene.unity
+    guid: bbbdcf3324ba143f187ad7e6455970a9
+  - enabled: 1
+    path: Assets/Scenes/Gameplay.unity
+    guid: 3f1496f30661d4260b5a21dddbcad684
+  - enabled: 1
+    path: Assets/Scenes/ChooseModeScene.unity
+    guid: 74f26da9391624470a42ad9e2a51721a
+  - enabled: 1
+    path: Assets/Scenes/LevelMoon.unity
+    guid: 6e4618407815d4787a7dddd63e0b7349
