@@ -174,6 +174,9 @@ public class PlayerController : BaseCharacter {
 				dead = true;
 		}
 
+		if (dead)
+			CameraShake.shakeCamera = true;
+
 			Move ();
 		if (enableNitroBar)
 			NitroBar ();
@@ -510,6 +513,7 @@ public class PlayerController : BaseCharacter {
 			PoolManager.Intance.lstPool [9].getindex ();
 			PoolManager.Intance.lstPool [9].GetPoolObject ().transform.position = transform.position;
 			PoolManager.Intance.lstPool [9].GetPoolObject ().SetActive (true);
+			Handheld.Vibrate();
 			transform.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 			dead = true;
 			break;
@@ -685,6 +689,7 @@ public class PlayerController : BaseCharacter {
 			transform.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 			// bật lại hàm countdown để chạy lại game.
 			time = 3f;
+			CameraShake.shakeCamera = false;
 			CountdownText.text = time.ToString ();
 			StartCoroutine (Countdown ());
 			angle = 0f;

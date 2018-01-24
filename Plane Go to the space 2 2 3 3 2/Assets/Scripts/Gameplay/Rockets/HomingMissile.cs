@@ -85,6 +85,11 @@ public class HomingMissile : MonoBehaviour {
 
 			SoundManager.Intance.PlayExpSound ();
 
+			// if the rocket destroy near the plane, the phone will be shaked.
+			float dist = Vector3.Distance (target.transform.position, transform.position);
+			if (dist < 5.0f)
+				Handheld.Vibrate();
+			
 			if (go.tag == "Player")
 				SoundManager.Intance.StopSpaceship ();
 		}
