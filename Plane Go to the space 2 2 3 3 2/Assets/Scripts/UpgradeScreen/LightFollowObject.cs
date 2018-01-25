@@ -19,8 +19,7 @@ public class LightFollowObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (loadDataUpgradeScene.isPlayGamePlane && objectFollow != null) {
+		if (loadDataUpgradeScene.isPlayGamePlane && objectFollow != null)
 			transform.position = objectFollow.position;
-		}
 	}
 }

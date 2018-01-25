@@ -95,9 +95,11 @@ public class UpgradeSpaceship : MonoBehaviour {
 			if (evol [0] != null && evol[0].activeSelf) {
 				foreach (Transform gob in evol[0].transform) {
 					UIAnimation ui = gob.GetComponent<UIAnimation> ();	
-					ui.ani.isChangeAni = false;
-					if (ui.ani.isFinishScaleDontLoop)
-						evol [0].SetActive (false);
+					if (ui != null) {
+						ui.ani.isChangeAni = false;
+						if (ui.ani.isFinishScaleDontLoop)
+							evol [0].SetActive (false);
+					}
 				}
 			}
 
@@ -113,9 +115,12 @@ public class UpgradeSpaceship : MonoBehaviour {
 			if (evol [0] != null && evol[0].activeSelf) {
 				foreach (Transform gob in evol[0].transform) {
 					UIAnimation ui = gob.GetComponent<UIAnimation> ();	
-					ui.ani.isChangeAni = false;
-					if (ui.ani.isFinishScaleDontLoop)
-						evol [0].SetActive (false);
+					if (ui != null) {
+						ui.ani.isChangeAni = false;
+						if (ui.ani.isFinishScaleDontLoop)
+							evol [0].SetActive (false);
+					}
+						
 				}
 			}
 		

@@ -286,12 +286,12 @@ public class LoadDataUpgradeScene : MonoBehaviour {
 	public void Play(){
 		if (gameObject.activeSelf) {
 			int unlockStt = PlayerPrefs.GetInt ("unlockChar" + horizontalScrollSnap.CurrentPage, 0);
-
+			Debug.Log (unlockStt);
 			if (unlockStt == 1) {
 				SoundManager.Intance.PlayClickBtn ();
 				StatusOfSpaceship spaceship = statusOfSpaceship [horizontalScrollSnap.CurrentPage];
 
-				spaceship.ShowEffect ();
+				spaceship.ShowEffect (horizontalScrollSnap.CurrentPage);
 
 				PlaneData.index = horizontalScrollSnap.CurrentPage;
 				isPlayGamePlane = true;
@@ -486,9 +486,49 @@ public class StatusOfSpaceship {
 			Effect [i].SetActive (false);
 	}
 
-	public void ShowEffect(){
-		for (int i = 0; i < Effect.Length; i++)
-			Effect [i].SetActive (true);
+	public void ShowEffect(int indexSpaceship){
+		if (indexSpaceship == 0) {
+			for (int i = 0; i < Effect.Length; i++) {
+				if (i == SaveManager.instance.state.indexEvolWater)
+					Effect [i].SetActive (true);
+				else
+					Effect [i].SetActive (false);
+			}
+		}
+		if (indexSpaceship == 1) {
+			for (int i = 0; i < Effect.Length; i++) {
+				if (i == SaveManager.instance.state.indexEvolFire)
+					Effect [i].SetActive (true);
+				else
+					Effect [i].SetActive (false);
+			}
+		}
+		if (indexSpaceship == 2) {
+			for (int i = 0; i < Effect.Length; i++) {
+				if (i == SaveManager.instance.state.indexEvolWood)
+					Effect [i].SetActive (true);
+				else
+					Effect [i].SetActive (false);
+			}
+		}
+		if (indexSpaceship == 3) {
+			for (int i = 0; i < Effect.Length; i++) {
+				if (i == SaveManager.instance.state.indexEvolEarth)
+					Effect [i].SetActive (true);
+				else
+					Effect [i].SetActive (false);
+			}
+		}
+		if (indexSpaceship == 4) {
+			for (int i = 0; i < Effect.Length; i++) {
+				if (i == SaveManager.instance.state.indexEvolMetal)
+					Effect [i].SetActive (true);
+				else
+					Effect [i].SetActive (false);
+			}
+		}
+		//for (int i = 0; i < Effect.Length; i++)
+		//	Effect [i].SetActive (true);
 	}
 
 	// 4.1
