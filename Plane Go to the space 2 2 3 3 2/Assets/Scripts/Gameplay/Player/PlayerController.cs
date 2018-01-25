@@ -77,6 +77,8 @@ public class PlayerController : BaseCharacter {
 	int indexSpaceship;
 	[SerializeField]
 	GameObject[] upgrade;
+	[SerializeField]
+	GameObject[] effectUpgrade;
 
 	private Vector3 zAxis;
 
@@ -708,6 +710,10 @@ public class PlayerController : BaseCharacter {
 						upgrade [i].SetActive (true);
 					else
 						upgrade [i].SetActive (false);
+
+				for (int i = 0; i < upgrade.Length; i++)
+					effectUpgrade [i].SetActive (false);
+				effectUpgrade [SaveManager.instance.state.indexEvolWater].SetActive (true);
 			}
 		}
 		if (indexSpaceship == 1) {
@@ -720,6 +726,10 @@ public class PlayerController : BaseCharacter {
 						upgrade [i].SetActive (true);
 					else
 						upgrade [i].SetActive (false);
+
+				for (int i = 0; i < upgrade.Length; i++)
+					effectUpgrade [i].SetActive (false);
+				effectUpgrade [SaveManager.instance.state.indexEvolFire].SetActive (true);
 			}
 		}
 		if (indexSpaceship == 2) {
@@ -732,6 +742,10 @@ public class PlayerController : BaseCharacter {
 						upgrade [i].SetActive (true);
 					else
 						upgrade [i].SetActive (false);
+
+				for (int i = 0; i < upgrade.Length; i++)
+					effectUpgrade [i].SetActive (false);
+				effectUpgrade [SaveManager.instance.state.indexEvolWood].SetActive (true);
 			}
 		}
 		if (indexSpaceship == 3) {
@@ -744,6 +758,10 @@ public class PlayerController : BaseCharacter {
 						upgrade [i].SetActive (true);
 					else
 						upgrade [i].SetActive (false);
+				
+				for (int i = 0; i < upgrade.Length; i++)
+					effectUpgrade [i].SetActive (false);
+				effectUpgrade [SaveManager.instance.state.indexEvolEarth].SetActive (true);
 			}
 		}
 		if (indexSpaceship == 4) {
@@ -756,6 +774,10 @@ public class PlayerController : BaseCharacter {
 						upgrade [i].SetActive (true);
 					else
 						upgrade [i].SetActive (false);
+				
+				for (int i = 0; i < upgrade.Length; i++)
+					effectUpgrade [i].SetActive (false);
+				effectUpgrade [SaveManager.instance.state.indexEvolMetal].SetActive (true);
 			}
 		}
 	}
