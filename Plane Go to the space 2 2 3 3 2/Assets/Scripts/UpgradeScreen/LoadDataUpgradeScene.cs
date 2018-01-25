@@ -248,6 +248,21 @@ public class LoadDataUpgradeScene : MonoBehaviour {
 		//SetStatusAllSpaceship ();
 	}
 
+	[SerializeField]
+	private GameObject[] overEffect;
+
+	public void HideOverEffect ()
+	{
+		for (int i = 0; i < overEffect.Length; i++)
+			overEffect [i].SetActive (false);
+	}
+
+	public void ShowOverEffect ()
+	{
+		for (int i = 0; i < overEffect.Length; i++)
+			overEffect [i].SetActive (true);
+	}
+
 	public void ShowInfo(){
 		GetStatusAllSpaceship ();
 

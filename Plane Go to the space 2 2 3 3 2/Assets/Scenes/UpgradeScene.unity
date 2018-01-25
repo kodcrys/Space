@@ -13706,6 +13706,14 @@ MonoBehaviour:
   nameSpaceshipText: {fileID: 2046378290}
   totalMoneyTxt: {fileID: 1076972858}
   isPlayGamePlane: 0
+  overEffect:
+  - {fileID: 1844893881}
+  - {fileID: 101941780}
+  - {fileID: 1311119700}
+  - {fileID: 1951697395}
+  - {fileID: 106355111}
+  - {fileID: 122642307}
+  - {fileID: 1749628403}
 --- !u!4 &483779783
 Transform:
   m_ObjectHideFlags: 0
@@ -22140,7 +22148,18 @@ MonoBehaviour:
   ChildObjects: []
   m_OnSelectionChangeStartEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 483779782}
+        m_MethodName: HideOverEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Extensions.ScrollSnapBase+SelectionChangeStartEvent,
       Assembly-CSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_OnSelectionPageChangedEvent:
@@ -22161,7 +22180,18 @@ MonoBehaviour:
       Assembly-CSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_OnSelectionChangeEndEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 483779782}
+        m_MethodName: ShowOverEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Extensions.ScrollSnapBase+SelectionChangeEndEvent,
       Assembly-CSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   isUpgradeScene: 0
@@ -28093,7 +28123,18 @@ MonoBehaviour:
   ChildObjects: []
   m_OnSelectionChangeStartEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1067755817}
+        m_MethodName: HideOverEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Extensions.ScrollSnapBase+SelectionChangeStartEvent,
       Assembly-CSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_OnSelectionPageChangedEvent:
@@ -28114,7 +28155,18 @@ MonoBehaviour:
       Assembly-CSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_OnSelectionChangeEndEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1067755817}
+        m_MethodName: ShowOverEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Extensions.ScrollSnapBase+SelectionChangeEndEvent,
       Assembly-CSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   isUpgradeScene: 0
@@ -28854,6 +28906,15 @@ MonoBehaviour:
   nameSpaceshipText: {fileID: 1887000905}
   totalMoneyTxt: {fileID: 2107088009}
   isPlayGamePlane: 0
+  overEffect:
+  - {fileID: 1598320878}
+  - {fileID: 450071866}
+  - {fileID: 1833565188}
+  - {fileID: 381357251}
+  - {fileID: 24073456}
+  - {fileID: 1554334128}
+  - {fileID: 749472141}
+  - {fileID: 1630016311}
 --- !u!4 &1067755818
 Transform:
   m_ObjectHideFlags: 0
