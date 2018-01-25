@@ -286,7 +286,6 @@ public class LoadDataUpgradeScene : MonoBehaviour {
 	public void Play(){
 		if (gameObject.activeSelf) {
 			int unlockStt = PlayerPrefs.GetInt ("unlockChar" + horizontalScrollSnap.CurrentPage, 0);
-			Debug.Log (unlockStt);
 			if (unlockStt == 1) {
 				SoundManager.Intance.PlayClickBtn ();
 				StatusOfSpaceship spaceship = statusOfSpaceship [horizontalScrollSnap.CurrentPage];
