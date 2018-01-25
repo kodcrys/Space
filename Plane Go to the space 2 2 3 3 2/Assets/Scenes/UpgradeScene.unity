@@ -2260,7 +2260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 368.00003, y: -547.5}
+  m_AnchoredPosition: {x: 368, y: -547.5}
   m_SizeDelta: {x: 734.6, y: 630.5801}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &72142628
@@ -3486,7 +3486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrailData:
     TrailMaterial: {fileID: 2100000, guid: 2c45238b0e8e5b443a693d7c92c89d3e, type: 2}
-    Lifetime: 0.22
+    Lifetime: 2.2
     UsingSimpleSize: 0
     SimpleSizeOverLifeStart: 0
     SimpleSizeOverLifeEnd: 0
@@ -3494,14 +3494,14 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: -0.000019073486
-        value: 0.23184815
+        time: -0.011035919
+        value: 0.50523984
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.58361816
-        value: -0.0036773682
+        time: 0.99671936
+        value: -0.00033569336
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -3563,7 +3563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrailData:
     TrailMaterial: {fileID: 2100000, guid: a6c0d0c41df93a243b0e594e935d9a86, type: 2}
-    Lifetime: 0.3
+    Lifetime: 3
     UsingSimpleSize: 0
     SimpleSizeOverLifeStart: 0
     SimpleSizeOverLifeEnd: 0
@@ -3571,20 +3571,20 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: -0.004135132
-        value: 0.19994766
+        time: -0.039367676
+        value: 0.49560195
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.24202827
-        value: 0.12961674
+        time: 0.35946754
+        value: 0.2774439
         inSlope: -0.593754
         outSlope: -0.593754
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.65127563
-        value: 0.0035247803
+        time: 1.0036011
+        value: -0.0017547607
         inSlope: -0.94677514
         outSlope: -0.94677514
         tangentMode: 0
@@ -5806,7 +5806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &177872638
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7061,7 +7061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &226251081
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15879,8 +15879,8 @@ MonoBehaviour:
         outSlope: 0
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.20372322
-        value: 0.028462619
+        time: 0.21184853
+        value: 0.050961703
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -17167,8 +17167,8 @@ MonoBehaviour:
         outSlope: 0
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.20372322
-        value: 0.028462619
+        time: 0.21184853
+        value: 0.050961703
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -18646,7 +18646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &689233969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20289,7 +20289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &747490912
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35362,7 +35362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1324678642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55005,7 +55005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1843168151
 RectTransform:
   m_ObjectHideFlags: 0
@@ -55124,7 +55124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrailData:
     TrailMaterial: {fileID: 2100000, guid: 2c45238b0e8e5b443a693d7c92c89d3e, type: 2}
-    Lifetime: 0.22
+    Lifetime: 1.55
     UsingSimpleSize: 0
     SimpleSizeOverLifeStart: 0
     SimpleSizeOverLifeEnd: 0
@@ -55132,14 +55132,14 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: -0.000019073486
-        value: 0.23184815
+        time: -0.011035919
+        value: 0.50523984
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.58361816
-        value: -0.0036773682
+        time: 0.99671936
+        value: -0.00033569336
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -55201,7 +55201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrailData:
     TrailMaterial: {fileID: 2100000, guid: a6c0d0c41df93a243b0e594e935d9a86, type: 2}
-    Lifetime: 0.3
+    Lifetime: 2
     UsingSimpleSize: 0
     SimpleSizeOverLifeStart: 0
     SimpleSizeOverLifeEnd: 0
@@ -55209,20 +55209,20 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: -0.004135132
-        value: 0.19994766
+        time: -0.039367676
+        value: 0.49560195
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.24202827
-        value: 0.12961674
+        time: 0.35946754
+        value: 0.2774439
         inSlope: -0.593754
         outSlope: -0.593754
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.65127563
-        value: 0.0035247803
+        time: 1.0036011
+        value: -0.0017547607
         inSlope: -0.94677514
         outSlope: -0.94677514
         tangentMode: 0
@@ -56637,7 +56637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1909647906
 RectTransform:
   m_ObjectHideFlags: 0
