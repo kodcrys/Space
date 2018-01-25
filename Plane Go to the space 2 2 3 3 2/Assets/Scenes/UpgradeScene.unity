@@ -33376,7 +33376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexEvol: 0
-  indexSpaceship: 3
+  indexSpaceship: 4
   evol:
   - {fileID: 1187721001}
   - {fileID: 1627818080}
@@ -41882,7 +41882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.003921569}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.62352943}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -101571,7 +101571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexEvol: 0
-  indexSpaceship: 3
+  indexSpaceship: 4
   evol:
   - {fileID: 751267156}
   - {fileID: 2115213274}
