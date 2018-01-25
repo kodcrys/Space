@@ -6,158 +6,137 @@ public class CutsceneManager : MonoBehaviour {
 
 	public static int whatScene;
 
-	public static bool nextScene, animDone;
+	[SerializeField]
+	GameObject cutScene1, cutScene2, skipButton;
 
 	[SerializeField]
-	string nameScene;
+	string nameScene1, nameScene2;
 
 	[SerializeField]
-	int currentCutscene;
+	Transform Des1;
+	[SerializeField]
+	Transform Des2;
+	[SerializeField]
+	Transform Des3;
 
 	[SerializeField]
-	GameObject skipButon;
+	int currentPage;
 
-	[Header("Cutscene 1")]
 	[SerializeField]
-	List<GameObject> allCutscene1 = new List<GameObject>();
+	float speed, timeNext;
 
-	[Header("Cutscene 2")]
+	bool doneCutScene;
+
+	[Header("Cac cutscene cua cutscene1")]
 	[SerializeField]
-	List<GameObject> allCutscene2 = new List<GameObject>();
+	List<GameObject> cutSceneItem1 = new List<GameObject>();
 
-	[Header("loi thoai 1")]
+	[Header("Cac cutscene cua cutscene2")]
 	[SerializeField]
-	List<GameObject> allLoiThoai1 = new List<GameObject>();
+	List<GameObject> cutSceneItem2 = new List<GameObject>();
 
-	[Header("loi thoai 2")]
-	[SerializeField]
-	List<GameObject> allLoiThoai2 = new List<GameObject>();
+	enum cutsceneStep{none, Begin, Mid, End}
 
+	cutsceneStep moveStep = cutsceneStep.none;
 
-
-	// Use this for initialization
-	void Start () {
-		SoundManager.Intance.BGSound.Play ();
-		currentCutscene = 0;
-		nextScene = false;
-		animDone = false;
+	void Start(){
+		moveStep = cutsceneStep.none;
+		currentPage = 0;
+		doneCutScene = false;
 		if (whatScene == 1) {
-			allCutscene1 [currentCutscene].SetActive (true);
-			if (SaveManager.instance.state.cutScene1Saw == true) {
-				skipButon.SetActive (true);
+			cutScene1.SetActive (true);
+			cutScene2.SetActive (false);
+			if (SaveManager.instance.state.cutScene1Saw) {
+				skipButton.SetActive (true);
 			} else {
-				skipButon.SetActive (false);
+				skipButton.SetActive (false);
 			}
 		} else {
-			allCutscene2 [currentCutscene].SetActive (true);
-			if (SaveManager.instance.state.cutScene2Saw == true) {
-				skipButon.SetActive (true);
+			cutScene2.SetActive (true);
+			cutScene1.SetActive (false);
+			if (SaveManager.instance.state.cutScene2Saw) {
+				skipButton.SetActive (true);
 			} else {
-				skipButon.SetActive (false);
+				skipButton.SetActive (false);
 			}
 		}
 	}
 
 	void Update(){
-		if (whatScene == 1) {
-			if (FadeInDone.isFadeInDone == true) {
-				if (nextScene == true) {
-					if (animDone == true) {
-						StartCoroutine (waitForLoiThoai ());
-						StartCoroutine (waitForCutscene ());
-					}
-					nextScene = false;
+		animCutScene ();
+		if (doneCutScene) {
+			if (whatScene == 1) {
+				NextScene (nameScene1);
+			} else {
+				NextScene (nameScene2);
+			}
+		}
+		Debug.Log (moveStep);
+	}
+
+	void animCutScene(){
+		switch (moveStep) {
+		case cutsceneStep.none:
+			if (FadeInDone.isFadeInDone) {
+				moveStep = cutsceneStep.Begin;
+			}
+			break;
+		case cutsceneStep.Begin:
+			if (whatScene == 1) {
+				cutSceneItem1 [currentPage].GetComponent<Animator> ().enabled = true;
+
+				if (CutsceneDone.doneCutScene) {
+					cutSceneItem1 [currentPage].SetActive (false);
+					moveStep = cutsceneStep.Mid;
+					CutsceneDone.doneCutScene = false;
+				}
+			} else {
+				cutSceneItem2 [currentPage].GetComponent<Animator> ().enabled = true;
+
+				if (CutsceneDone.doneCutScene) {
+					cutSceneItem2 [currentPage].SetActive (false);
+					moveStep = cutsceneStep.Mid;
+					CutsceneDone.doneCutScene = false;
 				}
 			}
-		} else {
-			if (FadeInDone.isFadeInDone == true) {
-				if (nextScene == true) {
-					if (animDone == true) {
-						StartCoroutine (waitForLoiThoai ());
-						StartCoroutine (waitForCutscene ());
-					}
-					nextScene = false;
+			break;
+
+		case cutsceneStep.Mid:
+			if (whatScene == 1) {
+				if (currentPage < cutSceneItem1.Count - 1) {
+					currentPage++;
+					cutSceneItem1 [currentPage].SetActive (true);
+					moveStep = cutsceneStep.Begin;
+				} else {
+					moveStep = cutsceneStep.End;
+				}
+			} else {
+				if (currentPage < cutSceneItem2.Count - 1) {
+					currentPage++;
+					cutSceneItem2 [currentPage].SetActive (true);
+					moveStep = cutsceneStep.Begin;
+				} else {
+					moveStep = cutsceneStep.End;
 				}
 			}
+			break;
+
+		case cutsceneStep.End:
+			doneCutScene = true;
+			FadeInManager.instance.fadeOut.enabled = true;
+			FadeInManager.instance.fadeOut.GetComponent<CanvasGroup> ().blocksRaycasts = true;
+			break;
 		}
 	}
 
 	public void SkipButton(){
-		StartCoroutine (DoneCutscene ());
-	}
-
-	IEnumerator waitForCutscene(){
-		yield return new WaitForSeconds (3f);
-		if (whatScene == 1) {
-			if (currentCutscene < allCutscene1.Count - 1) {
-				if (currentCutscene == 0) {
-					allCutscene1 [0].SetActive (false);
-					currentCutscene++;
-				} else if (currentCutscene >= 2) {
-					allCutscene1 [1].SetActive (false);
-					allCutscene1 [2].SetActive (false);
-					currentCutscene++;
-				} else {
-					currentCutscene++;
-				}
-				allCutscene1 [currentCutscene].SetActive (true);
-				allCutscene1 [currentCutscene].GetComponent<Animator> ().enabled = true;
-				nextScene = true;
-			} else {
-				StartCoroutine (DoneCutscene ());
-			}
-			animDone = false;
-		} else {
-			if (currentCutscene < allCutscene2.Count - 1) {
-				if (currentCutscene == 0) {
-					allCutscene2 [0].SetActive (false);
-					currentCutscene++;
-				} else if (currentCutscene >= 3) {
-					allCutscene2 [1].SetActive (false);
-					allCutscene2 [2].SetActive (false);
-					allCutscene2 [3].SetActive (false);
-					currentCutscene++;
-				} else {
-					currentCutscene++;
-				}
-				allCutscene2 [currentCutscene].SetActive (true);
-				allCutscene2 [currentCutscene].GetComponent<Animator> ().enabled = true;
-				nextScene = true;
-			} else {
-				StartCoroutine (DoneCutscene ());
-			}
-			animDone = false;
-		}
-	}
-
-	IEnumerator waitForLoiThoai(){
-		yield return new WaitForSeconds (0.5f);
-		if (whatScene == 1) {
-			allLoiThoai1 [currentCutscene].SetActive (true);
-		} else {
-			allLoiThoai2 [currentCutscene].SetActive (true);
-		}
-	}
-
-	IEnumerator DoneCutscene(){
-		yield return new WaitForSeconds (0.2f);
-		if (whatScene == 1) {
-			if (SaveManager.instance.state.cutScene1Saw == false)
-				SaveManager.instance.state.cutScene1Saw = true;
-		} else {
-			if (SaveManager.instance.state.cutScene2Saw == false)
-				SaveManager.instance.state.cutScene2Saw = true;
-		}
 		FadeInManager.instance.fadeOut.enabled = true;
 		FadeInManager.instance.fadeOut.GetComponent<CanvasGroup> ().blocksRaycasts = true;
+	}
+
+	void NextScene(string namescene){
 		if (FadeOutDone.isFadeOutDone == true) {
-			SoundManager.Intance.MuteSoundBG ();
-			SoundManager.Intance.StopSoundGamePlay ();
-			SoundManager.Intance.StopSpaceship ();
-			UnityEngine.SceneManagement.SceneManager.LoadScene (nameScene);
-			FadeOutDone.isFadeOutDone = false;
+			UnityEngine.SceneManagement.SceneManager.LoadScene (namescene);
 		}
-		SaveManager.instance.Save ();
-		StartCoroutine (DoneCutscene ());
 	}
 }

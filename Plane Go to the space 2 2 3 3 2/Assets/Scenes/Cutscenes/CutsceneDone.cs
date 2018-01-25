@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CutsceneDone : MonoBehaviour {
 
+	public static bool doneCutScene;
 
 	public void DoneCutscene(){
 		gameObject.GetComponent<Animator> ().enabled = false;
-		CutsceneManager.nextScene = true;
-		CutsceneManager.animDone = true;
+		doneCutScene = true;
 	}
 }

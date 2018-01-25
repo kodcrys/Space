@@ -207,7 +207,7 @@ public class GameManager : MonoBehaviour {
 				if (showCutScene == 1)
 					SceneManager.LoadScene (opGame.nameScene);
 				else
-					UnityEngine.SceneManagement.SceneManager.LoadScene ("CutScene2");
+					UnityEngine.SceneManagement.SceneManager.LoadScene ("CutScene1");
 
 				CutsceneManager.whatScene = 2;
 				FadeOutDone.isFadeOutDone = false;
@@ -293,7 +293,7 @@ public class GameManager : MonoBehaviour {
 				if (showCutScene == 1)
 					SceneManager.LoadScene (opGame.nameScene);
 				else
-					UnityEngine.SceneManagement.SceneManager.LoadScene ("CutScene2");
+					UnityEngine.SceneManagement.SceneManager.LoadScene ("CutScene1");
 			
 				FadeOutDone.isFadeOutDone = false;
 			}
