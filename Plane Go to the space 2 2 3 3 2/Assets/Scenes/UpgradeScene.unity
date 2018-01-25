@@ -33376,7 +33376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexEvol: 0
-  indexSpaceship: 3
+  indexSpaceship: 4
   evol:
   - {fileID: 1187721001}
   - {fileID: 1627818080}
