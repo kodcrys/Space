@@ -911,9 +911,19 @@ Prefab:
       propertyPath: joystickObj
       value: 
       objectReference: {fileID: 1198688282}
+    - target: {fileID: 114860106884073618, guid: 9e07b0fc6518046c19494804633a2f02,
+        type: 2}
+      propertyPath: ShockwareEffect
+      value: 
+      objectReference: {fileID: 161434434}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e07b0fc6518046c19494804633a2f02, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &161434434 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1682118597020658, guid: 9e07b0fc6518046c19494804633a2f02,
+    type: 2}
+  m_PrefabInternal: {fileID: 161434433}
 --- !u!114 &265748028 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114912830311397916, guid: a54ef5c88b2f54643bf0332f6f508e77,
@@ -4608,9 +4618,19 @@ Prefab:
       propertyPath: joystickObj
       value: 
       objectReference: {fileID: 1198688282}
+    - target: {fileID: 114912830311397916, guid: a54ef5c88b2f54643bf0332f6f508e77,
+        type: 2}
+      propertyPath: ShockwareEffect
+      value: 
+      objectReference: {fileID: 439407947}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a54ef5c88b2f54643bf0332f6f508e77, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &439407947 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1761081086558368, guid: a54ef5c88b2f54643bf0332f6f508e77,
+    type: 2}
+  m_PrefabInternal: {fileID: 439407946}
 --- !u!1 &468619739
 GameObject:
   m_ObjectHideFlags: 0
@@ -6147,9 +6167,19 @@ Prefab:
       propertyPath: joystickObj
       value: 
       objectReference: {fileID: 1198688282}
+    - target: {fileID: 114616230489879242, guid: 1a6948e295ab040019bc5f28988f05e3,
+        type: 2}
+      propertyPath: ShockwareEffect
+      value: 
+      objectReference: {fileID: 785585735}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a6948e295ab040019bc5f28988f05e3, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &785585735 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1352429894032458, guid: 1a6948e295ab040019bc5f28988f05e3,
+    type: 2}
+  m_PrefabInternal: {fileID: 785585734}
 --- !u!1 &830013638
 GameObject:
   m_ObjectHideFlags: 0
@@ -15159,9 +15189,19 @@ Prefab:
       propertyPath: joystickObj
       value: 
       objectReference: {fileID: 1198688282}
+    - target: {fileID: 114383150741134574, guid: 068a6df03916e47dc9373fb666ec93e5,
+        type: 2}
+      propertyPath: ShockwareEffect
+      value: 
+      objectReference: {fileID: 1416800973}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 068a6df03916e47dc9373fb666ec93e5, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1416800973 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1466203709248130, guid: 068a6df03916e47dc9373fb666ec93e5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1416800972}
 --- !u!1 &1423342174
 GameObject:
   m_ObjectHideFlags: 0
@@ -16216,9 +16256,19 @@ Prefab:
       propertyPath: joystickObj
       value: 
       objectReference: {fileID: 1198688282}
+    - target: {fileID: 114247857424345432, guid: 7fb92b050abac44bfa48c33fca40a0b9,
+        type: 2}
+      propertyPath: ShockwareEffect
+      value: 
+      objectReference: {fileID: 1658993801}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7fb92b050abac44bfa48c33fca40a0b9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1658993801 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1571448725632640, guid: 7fb92b050abac44bfa48c33fca40a0b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1658993800}
 --- !u!1 &1668525400
 GameObject:
   m_ObjectHideFlags: 0
