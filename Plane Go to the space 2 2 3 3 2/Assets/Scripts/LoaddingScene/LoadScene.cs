@@ -27,9 +27,11 @@ public class LoadScene : MonoBehaviour {
 		count = 0;
 		countDead = 0;
 		showAds = false;
+
 		GGAmob.Intance.RequestBanner ();
 		GGAmob.Intance.RequestInterstitial ();
 		GGAmob.Intance.RequestRewardBasedVideo ();
+
 		if (SaveManager.instance.state.fadeInOut == true) {
 			BackFadeFirstTime ();
 		}
@@ -56,6 +58,7 @@ public class LoadScene : MonoBehaviour {
 		if (Time.time > LogoTime && loadTime != 0) {
 			fadeGroup.alpha = Time.time - LogoTime;
 			if (fadeGroup.alpha >= 1) {
+				Debug.Log ("isPurchaseRemoeAds: " + SaveManager.instance.state.isPurchaseRemoveAds);
 				if (SaveManager.instance.state.isPurchaseRemoveAds == false)
 					GGAmob.Intance.ShowBanner ();
 				else

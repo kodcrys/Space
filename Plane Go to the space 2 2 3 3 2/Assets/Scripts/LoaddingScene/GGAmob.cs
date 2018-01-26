@@ -175,7 +175,8 @@ public class GGAmob : MonoBehaviour {
 	}
 
 	public void ShowBanner(){
-		this.bannerView.Show ();
+		if (SaveManager.instance.state.isPurchaseRemoveAds == false)
+			this.bannerView.Show ();
 	}
 
 	public void HideBanner(){

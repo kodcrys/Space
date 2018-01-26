@@ -128,11 +128,18 @@ public class CutsceneManager : MonoBehaviour {
 			break;
 
 		case cutsceneStep.End:
-			if(SoundManager.Intance.BGCutScene1Sound.isPlaying)
+			if (SoundManager.Intance.BGCutScene1Sound.isPlaying)
 				SoundManager.Intance.BGCutScene1Sound.Stop ();
-			if(SoundManager.Intance.BGCutScene2Sound.isPlaying)
+			if (SoundManager.Intance.BGCutScene2Sound.isPlaying)
 				SoundManager.Intance.BGCutScene2Sound.Stop ();
 			doneCutScene = true;
+			if (whatScene == 1) {
+				if (!SaveManager.instance.state.cutScene1Saw)
+					SaveManager.instance.state.cutScene1Saw = true;
+			} else {
+				if (!SaveManager.instance.state.cutScene2Saw)
+					SaveManager.instance.state.cutScene2Saw = true;
+			}
 			FadeInManager.instance.fadeOut.enabled = true;
 			FadeInManager.instance.fadeOut.GetComponent<CanvasGroup> ().blocksRaycasts = true;
 			break;
