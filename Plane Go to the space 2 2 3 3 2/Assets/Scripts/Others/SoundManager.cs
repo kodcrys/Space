@@ -25,7 +25,8 @@ public class SoundManager : MonoBehaviour {
 	private AudioClip dropCoin;
 
 	[Header("AudioSource")]
-	public AudioSource BGSound;
+	public AudioSource BGCutScene1Sound;
+	public AudioSource BGCutScene2Sound;
 	public AudioSource OthersSound;
 	public AudioSource SpaceshipSound;
 	public AudioSource GamePlaySound;
@@ -43,8 +44,8 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void MuteSound(){
-		if (BGSound != null)
-			BGSound.mute = true;
+		if (BGCutScene1Sound != null)
+			BGCutScene1Sound.mute = true;
 		if (OthersSound != null)
 			OthersSound.mute = true;
 		if (SpaceshipSound != null)
@@ -52,8 +53,8 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void PlaySound(){
-		if (BGSound != null)
-			BGSound.mute = false;
+		if (BGCutScene1Sound != null)
+			BGCutScene1Sound.mute = false;
 		if (OthersSound != null)
 			OthersSound.mute = false;
 		if (SpaceshipSound != null)
@@ -105,14 +106,24 @@ public class SoundManager : MonoBehaviour {
 			OthersSound.PlayOneShot (dropCoin);
 	}
 
-	public void PlaySoundBG(){
-		if (BGSound != null)
-			BGSound.Play ();
+	public void PlaySoundCutScene1BG(){
+		if (BGCutScene1Sound != null)
+			BGCutScene1Sound.Play ();
 	}
 
-	public void MuteSoundBG(){
-		if (BGSound != null)
-			BGSound.Stop ();
+	public void PlaySoundCutScene2BG(){
+		if (BGCutScene2Sound != null)
+			BGCutScene2Sound.Play ();
+	}
+
+	public void MuteSoundCutScene1BG(){
+		if (BGCutScene1Sound != null)
+			BGCutScene1Sound.Stop ();
+	}
+
+	public void MuteSoundCutScene2BG(){
+		if (BGCutScene2Sound != null)
+			BGCutScene2Sound.Stop ();
 	}
 
 	public void PlaySpaceship(){

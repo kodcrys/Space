@@ -70,7 +70,8 @@ public class Revive : MonoBehaviour {
 			GameOver.SetActive (true);
 
 			// Tắt âm thanh khi game over.
-			SoundManager.Intance.MuteSoundBG ();
+			SoundManager.Intance.MuteSoundCutScene1BG ();
+			SoundManager.Intance.MuteSoundCutScene2BG ();
 			SoundManager.Intance.StopSoundGamePlay ();
 			SoundManager.Intance.StopSpaceship ();
 			// Tắt panel revive đi.

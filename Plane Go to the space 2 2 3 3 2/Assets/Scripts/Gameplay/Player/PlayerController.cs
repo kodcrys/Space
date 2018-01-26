@@ -603,7 +603,8 @@ public class PlayerController : BaseCharacter {
 				RevivePanel.SetActive (false);
 				GameOver.SetActive (true);
 
-				SoundManager.Intance.MuteSoundBG ();
+				SoundManager.Intance.MuteSoundCutScene1BG ();
+				SoundManager.Intance.MuteSoundCutScene2BG ();
 				SoundManager.Intance.StopSoundGamePlay ();
 				SoundManager.Intance.StopSpaceship ();
 
@@ -641,7 +642,8 @@ public class PlayerController : BaseCharacter {
 			RevivePanel.SetActive (false);
 			GameOver.SetActive (true);
 
-			SoundManager.Intance.MuteSoundBG ();
+			SoundManager.Intance.MuteSoundCutScene1BG ();
+			SoundManager.Intance.MuteSoundCutScene2BG ();
 			SoundManager.Intance.StopSoundGamePlay ();
 			SoundManager.Intance.StopSpaceship ();
 

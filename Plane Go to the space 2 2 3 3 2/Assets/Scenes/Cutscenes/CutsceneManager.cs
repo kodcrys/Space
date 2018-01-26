@@ -78,8 +78,13 @@ public class CutsceneManager : MonoBehaviour {
 		case cutsceneStep.none:
 			if (FadeInDone.isFadeInDone) {
 				moveStep = cutsceneStep.Begin;
-				if(SoundManager.Intance.BGSound.isPlaying == false)
-					SoundManager.Intance.BGSound.Play ();
+				if (whatScene == 1) {
+					if (SoundManager.Intance.BGCutScene1Sound.isPlaying == false)
+						SoundManager.Intance.BGCutScene1Sound.Play ();
+				} else {
+					if (SoundManager.Intance.BGCutScene2Sound.isPlaying == false)
+						SoundManager.Intance.BGCutScene2Sound.Play ();
+				}
 			}
 			break;
 		case cutsceneStep.Begin:
@@ -123,8 +128,10 @@ public class CutsceneManager : MonoBehaviour {
 			break;
 
 		case cutsceneStep.End:
-			if(SoundManager.Intance.BGSound.isPlaying)
-				SoundManager.Intance.BGSound.Stop ();
+			if(SoundManager.Intance.BGCutScene1Sound.isPlaying)
+				SoundManager.Intance.BGCutScene1Sound.Stop ();
+			if(SoundManager.Intance.BGCutScene2Sound.isPlaying)
+				SoundManager.Intance.BGCutScene2Sound.Stop ();
 			doneCutScene = true;
 			FadeInManager.instance.fadeOut.enabled = true;
 			FadeInManager.instance.fadeOut.GetComponent<CanvasGroup> ().blocksRaycasts = true;

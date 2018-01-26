@@ -316,8 +316,10 @@ public class GGAmob : MonoBehaviour {
 	{
 		Time.timeScale = 0f;
 		StaticOption.isVideoReward = true;
-		if(SoundManager.Intance.BGSound.isPlaying)
-			SoundManager.Intance.MuteSoundBG ();
+		if(SoundManager.Intance.BGCutScene1Sound.isPlaying)
+			SoundManager.Intance.MuteSoundCutScene1BG ();
+		if(SoundManager.Intance.BGCutScene2Sound.isPlaying)
+			SoundManager.Intance.MuteSoundCutScene2BG ();
 		if (SoundManager.Intance.GamePlaySound.isPlaying)
 			SoundManager.Intance.StopSoundGamePlay ();
 		if (SoundManager.Intance.SpaceshipSound.isPlaying)
@@ -345,7 +347,8 @@ public class GGAmob : MonoBehaviour {
 			SoundManager.Intance.PlaySoundGamePlay ();
 			SoundManager.Intance.PlaySpaceship ();
 		} else {
-			SoundManager.Intance.MuteSoundBG ();
+			SoundManager.Intance.MuteSoundCutScene1BG ();
+			SoundManager.Intance.MuteSoundCutScene2BG ();
 			SoundManager.Intance.StopSoundGamePlay ();
 			SoundManager.Intance.StopSpaceship ();
 		}

@@ -80,7 +80,8 @@ public class WinLevel : MonoBehaviour {
 						SoundManager.Intance.PlayWinGame ();
 						isPlaySoundOnce = true;
 					}
-					SoundManager.Intance.MuteSoundBG ();
+					SoundManager.Intance.MuteSoundCutScene1BG ();
+					SoundManager.Intance.MuteSoundCutScene2BG ();
 					SoundManager.Intance.StopSoundGamePlay ();
 					SoundManager.Intance.StopSpaceship ();
 					PlaneRotate.SetActive (true);
