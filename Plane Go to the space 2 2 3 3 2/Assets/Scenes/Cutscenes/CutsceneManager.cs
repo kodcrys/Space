@@ -79,6 +79,8 @@ public class CutsceneManager : MonoBehaviour {
 		case cutsceneStep.none:
 			if (FadeInDone.isFadeInDone) {
 				moveStep = cutsceneStep.Begin;
+				if(SoundManager.Intance.BGSound.isPlaying == false)
+					SoundManager.Intance.BGSound.Play ();
 			}
 			break;
 		case cutsceneStep.Begin:
@@ -122,6 +124,8 @@ public class CutsceneManager : MonoBehaviour {
 			break;
 
 		case cutsceneStep.End:
+			if(SoundManager.Intance.BGSound.isPlaying)
+				SoundManager.Intance.BGSound.Stop ();
 			doneCutScene = true;
 			FadeInManager.instance.fadeOut.enabled = true;
 			FadeInManager.instance.fadeOut.GetComponent<CanvasGroup> ().blocksRaycasts = true;
