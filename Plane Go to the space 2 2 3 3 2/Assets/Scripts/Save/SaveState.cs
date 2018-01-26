@@ -50,7 +50,7 @@
 	public bool isFirstGameBitCoin = true;
 
 	// 
-	public bool isPurchaseRemoveAds = false;
+	public bool isPurchaseRemoveAds;
 
 	//
 	public int startingScreen = 0;

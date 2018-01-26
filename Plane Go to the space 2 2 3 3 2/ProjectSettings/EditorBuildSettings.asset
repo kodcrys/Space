@@ -17,8 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bitcoin.unity
     guid: 07ac0cfae181843f9a699f5f383d589b
-  - enabled: 1
-    path: Assets/Scenes/Cutscenes/Cutscene2.unity
+  - enabled: 0
+    path: 
     guid: 34b1602c7aa914caca4c351dcb635485
   - enabled: 1
     path: Assets/Scenes/ChooseLevelScene.unity

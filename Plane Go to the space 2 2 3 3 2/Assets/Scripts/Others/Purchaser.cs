@@ -387,6 +387,7 @@ public class Purchaser : MonoBehaviour, IStoreListener {
 		if (String.Equals(args.purchasedProduct.definition.id, kProductIDNonConsumable, StringComparison.Ordinal))
 		{
 			SaveManager.instance.state.isPurchaseRemoveAds = true;
+			GGAmob.Intance.HideBanner ();
 			SaveManager.instance.Save ();
 			Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
 			// TODO: The non-consumable item has been successfully purchased, grant this item to the player.
