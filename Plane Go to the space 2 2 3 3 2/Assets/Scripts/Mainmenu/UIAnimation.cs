@@ -128,6 +128,7 @@ public class UIAnimation : MonoBehaviour {
 			case AniState.planeTakeOff:
 				if (loadDataUpgradeScene.isPlayGamePlane && index != 0 && loadDataUpgradeScene.horizontalScrollSnap.CurrentPage + 1 == index) {
 					
+					loadDataUpgradeScene.ShowOverEffect ();
 					objWhenTakeOff.scrollSnap.enabled = false;
 					objWhenTakeOff.Move (objWhenTakeOff.panelItem, objWhenTakeOff.desPanelItem, 7);
 					objWhenTakeOff.Move (objWhenTakeOff.panelStatus, objWhenTakeOff.desPanelStatus, 11);

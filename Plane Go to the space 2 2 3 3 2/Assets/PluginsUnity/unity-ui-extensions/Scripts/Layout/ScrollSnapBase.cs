@@ -58,6 +58,9 @@ namespace UnityEngine.UI.Extensions
         [Tooltip("Button to go to the next page. (optional)")]
         public GameObject NextButton;
 
+		[SerializeField]
+		GameObject[] overObjectsEffect;
+
         [Tooltip("Transition speed between pages. (optional)")]
         public float transitionSpeed = 7.5f;
 

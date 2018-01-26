@@ -75,6 +75,8 @@ public class LoadDataUpgradeScene : MonoBehaviour {
 			statusOfSpaceship [i].EvolSpaceship (i);
 		}
 
+		HideOverEffect ();
+
 		//
 		totalMoneyTxt.text =  AbbrevationUtility.FormatNumber(SaveManager.instance.state.money);
 
