@@ -1488,11 +1488,9 @@ MonoBehaviour:
   cutScene1: {fileID: 1444282591}
   cutScene2: {fileID: 1288742039}
   skipButton: {fileID: 48133439}
+  skipButton2: {fileID: 862068191}
   nameScene1: Bitcoin
   nameScene2: ChooseModeScene
-  Des1: {fileID: 0}
-  Des2: {fileID: 0}
-  Des3: {fileID: 0}
   currentPage: 0
   speed: 20
   timeNext: 0

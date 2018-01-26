@@ -7,17 +7,10 @@ public class CutsceneManager : MonoBehaviour {
 	public static int whatScene;
 
 	[SerializeField]
-	GameObject cutScene1, cutScene2, skipButton;
+	GameObject cutScene1, cutScene2, skipButton, skipButton2;
 
 	[SerializeField]
 	string nameScene1, nameScene2;
-
-	[SerializeField]
-	Transform Des1;
-	[SerializeField]
-	Transform Des2;
-	[SerializeField]
-	Transform Des3;
 
 	[SerializeField]
 	int currentPage;
@@ -55,9 +48,9 @@ public class CutsceneManager : MonoBehaviour {
 			cutScene2.SetActive (true);
 			cutScene1.SetActive (false);
 			if (SaveManager.instance.state.cutScene2Saw) {
-				skipButton.SetActive (true);
+				skipButton2.SetActive (true);
 			} else {
-				skipButton.SetActive (false);
+				skipButton2.SetActive (false);
 			}
 		}
 	}
