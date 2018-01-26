@@ -39,8 +39,6 @@ public class TutorialUpgradeScene : MonoBehaviour {
 			} else
 				panelTut.SetActive (false);
 		} else {
-			Debug.Log ("isScenUpgade = false");
-			Debug.Log (" " + SaveManager.instance.state.isFirstGameBitCoin);
 			if (SaveManager.instance.state.isFirstGameBitCoin) {
 				if (MultiResolution.device == "iphonex") {
 					hand.transform.position = posHandX [indexPosHand].transform.position;

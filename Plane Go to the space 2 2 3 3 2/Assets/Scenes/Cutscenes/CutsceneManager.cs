@@ -71,7 +71,6 @@ public class CutsceneManager : MonoBehaviour {
 				NextScene (nameScene2);
 			}
 		}
-		Debug.Log (moveStep);
 	}
 
 	void animCutScene(){

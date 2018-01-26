@@ -657,6 +657,7 @@ public class PlayerController : BaseCharacter {
 					PlayerPrefs.SetInt ("highscoreEndless", Mathf.RoundToInt (timelive));
 				score.text = "SCORE: " + Mathf.RoundToInt (timelive).ToString ();
 				highScore.text = "HIGH SCORE: " + PlayerPrefs.GetInt ("highscoreEndless", 0).ToString ();
+				LeaderboardManager.ReportScore (LoadScene.leaderboardIdEndlessStr, highscore);
 			}
 			else
 			{
@@ -665,7 +666,7 @@ public class PlayerController : BaseCharacter {
 					PlayerPrefs.SetInt ("highscoreLevel", Mathf.RoundToInt (timelive));
 				score.text = "SCORE: " + Mathf.RoundToInt (timelive).ToString ();
 				highScore.text = "HIGH SCORE: " + PlayerPrefs.GetInt ("highscoreLevel", 0).ToString ();
-				LeaderboardManager.ReportScore (highscore);
+				LeaderboardManager.ReportScore (LoadScene.leaderboardIdLevelStr, highscore);
 			}
 
 		}

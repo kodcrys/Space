@@ -108,7 +108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1558714560718298
 GameObject:
   m_ObjectHideFlags: 1
@@ -124,7 +124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1598120759715646
 GameObject:
   m_ObjectHideFlags: 1
@@ -840,7 +840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrailData:
     TrailMaterial: {fileID: 2100000, guid: 36c272970a343a24cbd74022d095bf4e, type: 2}
-    Lifetime: 1
+    Lifetime: 0.7
     UsingSimpleSize: 0
     SimpleSizeOverLifeStart: 0
     SimpleSizeOverLifeEnd: 0
