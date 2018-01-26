@@ -19,6 +19,9 @@ public class InAppPurchaseMenu : MonoBehaviour {
 	[SerializeField]
 	Button Buy100;
 
+	[SerializeField]
+	GameObject[] priceX2;
+
 	[Header("button close IAP menu")]
 	[SerializeField]
 	Button CloseIAPMenu;
@@ -42,6 +45,41 @@ public class InAppPurchaseMenu : MonoBehaviour {
 		Buy100.onClick.AddListener (buy100);
 
 		CloseIAPMenu.onClick.AddListener (closeIAP);
+
+		if (SaveManager.instance.state.isX2pack1)
+			priceX2 [0].SetActive (true);
+		else
+			priceX2 [0].SetActive (false);
+
+		if (SaveManager.instance.state.isX2pack5)
+			priceX2 [1].SetActive (true);
+		else
+			priceX2 [1].SetActive (false);
+
+		if (SaveManager.instance.state.isX2pack10 )
+			priceX2 [2].SetActive (true);
+		else
+			priceX2 [2].SetActive (false);
+
+		if (SaveManager.instance.state.isX2pack15 )
+			priceX2 [3].SetActive (true);
+		else
+			priceX2 [3].SetActive (false);
+
+		if (SaveManager.instance.state.isX2pack30 )
+			priceX2 [4].SetActive (true);
+		else
+			priceX2 [4].SetActive (false);
+
+		if (SaveManager.instance.state.isX2pack50 )
+			priceX2 [5].SetActive (true);
+		else
+			priceX2 [5].SetActive (false);
+
+		if (SaveManager.instance.state.isX2pack100 )
+			priceX2 [6].SetActive (true);
+		else
+			priceX2 [6].SetActive (false);
 	}
 
 	void buy1() {
