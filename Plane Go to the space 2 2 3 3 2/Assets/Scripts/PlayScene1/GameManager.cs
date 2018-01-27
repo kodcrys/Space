@@ -229,10 +229,10 @@ public class GameManager : MonoBehaviour {
 			if (opGame.timer >= opGame.timeInter) {
 				if (SaveManager.instance.state.coin < SaveManager.instance.state.storage) {
 					SaveManager.instance.state.coin += SaveManager.instance.state.timeCoin;
+					SaveManager.instance.Save ();
 				}
 				opGame.timer = 0;
 			}
-			SaveManager.instance.Save ();
 		}
 	}
 
