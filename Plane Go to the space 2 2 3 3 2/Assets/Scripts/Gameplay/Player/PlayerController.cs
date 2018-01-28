@@ -703,7 +703,6 @@ public class PlayerController : BaseCharacter {
 
 	void ReadUpgrade() {
 		if (indexSpaceship == 0) {
-			Debug.Log (SaveManager.instance.state.indexEvolWater);
 			if (SaveManager.instance.state.indexEvolWater <= 0) {
 				for (int i = 0; i < upgrade.Length; i++)
 					upgrade [i].SetActive (false);
