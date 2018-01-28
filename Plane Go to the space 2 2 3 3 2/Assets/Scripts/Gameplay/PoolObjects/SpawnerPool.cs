@@ -13,7 +13,7 @@ public class SpawnerPool : MonoBehaviour {
 	[SerializeField]
 	private int Div, MaxRockets, MaxClouds;
 	[SerializeField]
-	private GameObject[] SpawnerPos;
+	private GameObject[] SpawnerPos, SpawnerPosTop;
 	// Check Endless Mode
 	public bool checkEndless;
 
@@ -33,6 +33,8 @@ public class SpawnerPool : MonoBehaviour {
 		StartCoroutine (Countdown());
 		// 1. Loop unlimit and call the spawner ball function
 		StartCoroutine (Spawner());
+		if (endless)
+			StartCoroutine (SpawnerTop ());
 	}
 	
 	// 1.1 Create a new rocket.
@@ -88,6 +90,29 @@ public class SpawnerPool : MonoBehaviour {
 		}
 			// Repeat the action create rocket
 		StartCoroutine (Spawner ());
+	}
+
+	IEnumerator SpawnerTop()
+	{
+		// Time create the rockets will depend on position of the plane.
+		float addRockets = (transform.position.y / Div);
+		maxRocketsAvailable += Mathf.RoundToInt (addRockets);
+		// If the time create the rockets are too small, just force it create rocket every second.
+		yield return new WaitForSeconds (3f);
+
+		if (countRockets <= maxRocketsAvailable && transform.position.y >= 800) 
+		{
+			// Create a random rocket with random position y
+			int RandPosTop = Random.Range (0, SpawnerPosTop.Length);
+			countRockets++;
+			int randRocketTop = Random.Range (0, MaxRockets - 1);
+			Vector3 tempRocketTop = new Vector3 (0, 0, 0);
+			PoolManager.Intance.lstPool [randRocketTop].getindex ();
+			PoolManager.Intance.lstPool [randRocketTop].GetPoolObject ().transform.position = SpawnerPosTop [RandPosTop].transform.position + tempRocketTop;
+			PoolManager.Intance.lstPool [randRocketTop].GetPoolObject ().SetActive (true);
+		}
+
+		StartCoroutine (SpawnerTop ());
 	}
 
 	IEnumerator Countdown()

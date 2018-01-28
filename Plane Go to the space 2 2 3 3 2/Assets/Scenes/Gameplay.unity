@@ -9826,7 +9826,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1218284989}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11, y: 30, z: 0}
+  m_LocalPosition: {x: -11, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1346458238}
@@ -10542,10 +10542,11 @@ MonoBehaviour:
   SpawnerPos:
   - {fileID: 951086638}
   - {fileID: 1314047944}
-  - {fileID: 1218284989}
-  - {fileID: 1994355146}
   - {fileID: 1964774350}
   - {fileID: 1348229527}
+  SpawnerPosTop:
+  - {fileID: 1218284989}
+  - {fileID: 1994355146}
   checkEndless: 1
 --- !u!4 &1346458238
 Transform:
@@ -15942,7 +15943,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1994355146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11, y: 30, z: 0}
+  m_LocalPosition: {x: 11, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1346458238}
