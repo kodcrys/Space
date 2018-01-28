@@ -11472,6 +11472,7 @@ MonoBehaviour:
   - {fileID: 1314047944}
   - {fileID: 1964774350}
   - {fileID: 1348229527}
+  SpawnerPosTop: []
   checkEndless: 0
 --- !u!4 &1346458238
 Transform:
@@ -17171,8 +17172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 637eb8e9337e846839911c2c9ed4d6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pooledObject: {fileID: 1983816894359426, guid: 848a94e37de4540f0a93d19563165447,
-    type: 2}
+  pooledObject: {fileID: 174822, guid: 848a94e37de4540f0a93d19563165447, type: 2}
   pooledAmount: 100
 --- !u!1 &1964774350
 GameObject:
