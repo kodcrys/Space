@@ -21,6 +21,9 @@ public class HomingMissile : MonoBehaviour {
 	[SerializeField]
 	private int ExplosionPrefab;
 
+	[SerializeField]
+	AudioSource audioRocket;
+
 	// Use this for initialization
 	void Start () {
 		// Get the rigid bory of the rocket
@@ -30,6 +33,35 @@ public class HomingMissile : MonoBehaviour {
 
 		// speed of rockets always > speed of plane
 		speed = PlaneData.speedchoosePlane * 0.5f + 6;
+
+		StartCoroutine (AdjustVolume ());
+	}
+
+	IEnumerator AdjustVolume () {
+
+		while(true) {
+			int statusSound = PlayerPrefs.GetInt ("Sound", 0);
+			if (statusSound == 0) {
+				audioRocket.mute = false;
+				if (audioRocket.isPlaying) { // do this only if some audio is being played in this gameObject's AudioSource
+
+					float distanceToTarget = Vector3.Distance (transform.position, target.position); // Assuming that the target is the player or the audio listener
+					//Debug.Log(distanceToTarget);
+					if (distanceToTarget >= 8)
+						distanceToTarget = 1;
+					else
+						distanceToTarget /= 8;
+
+					audioRocket.volume = 1 - distanceToTarget; // this works as a linear function, while the 3D sound works like a logarithmic function, so the effect will be a little different (correct me if I'm wrong)
+
+					//yield return new WaitForSeconds (0.02f); // this will adjust the volume based on distance every 1 second (Obviously, You can reduce this to a lower value if you want more updates per second)
+
+				}
+			} else
+				audioRocket.mute = true;
+			yield return new WaitForSeconds (0.2f);
+		}
+
 	}
 
 	void OnEnable ()
