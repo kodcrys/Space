@@ -18,7 +18,6 @@ public class CutsceneManager : MonoBehaviour {
 	[SerializeField]
 	float speed, timeNext;
 
-	bool doneCutScene;
 
 	[Header("Cac cutscene cua cutscene1")]
 	[SerializeField]
@@ -35,7 +34,6 @@ public class CutsceneManager : MonoBehaviour {
 	void Start(){
 		moveStep = cutsceneStep.none;
 		currentPage = 0;
-		doneCutScene = false;
 		if (whatScene == 1) {
 			cutScene1.SetActive (true);
 			cutScene2.SetActive (false);
@@ -57,12 +55,10 @@ public class CutsceneManager : MonoBehaviour {
 
 	void Update(){
 		animCutScene ();
-		if (doneCutScene) {
-			if (whatScene == 1) {
-				NextScene (nameScene1);
-			} else {
-				NextScene (nameScene2);
-			}
+		if (whatScene == 1) {
+			NextScene (nameScene1);
+		} else {
+			NextScene (nameScene2);
 		}
 	}
 
@@ -125,7 +121,6 @@ public class CutsceneManager : MonoBehaviour {
 				SoundManager.Intance.BGCutScene1Sound.Stop ();
 			if (SoundManager.Intance.BGCutScene2Sound.isPlaying)
 				SoundManager.Intance.BGCutScene2Sound.Stop ();
-			doneCutScene = true;
 			if (whatScene == 1) {
 				if (!SaveManager.instance.state.cutScene1Saw)
 					SaveManager.instance.state.cutScene1Saw = true;
