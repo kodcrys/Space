@@ -1,20 +1,20 @@
 
 skeleton.png
-size: 1760,1579
+size: 1760,1501
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Earth
   rotate: false
-  xy: 2, 477
+  xy: 2, 399
   size: 1756, 1100
   orig: 1756, 1100
   offset: 0, 0
   index: -1
-Title
+logo update
   rotate: false
   xy: 2, 2
-  size: 827, 473
-  orig: 827, 473
+  size: 685, 395
+  orig: 685, 395
   offset: 0, 0
   index: -1
