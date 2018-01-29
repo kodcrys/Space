@@ -685,7 +685,7 @@ public class PlayerController : BaseCharacter {
 			// tắt revive panel 
 			RevivePanel.SetActive (false);
 			// bật lại effect 
-			Effects.SetActive (true);
+			ReadUpgrade ();
 			revive = true;
 			dead = false;
 			// hồi phục lại full xăng.

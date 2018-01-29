@@ -49,11 +49,11 @@ public class HomingMissile : MonoBehaviour {
 					float distanceToTarget = Vector3.Distance (transform.position, target.position); // Assuming that the target is the player or the audio listener
 					//Debug.Log(distanceToTarget);
 					if (distanceToTarget >= 8)
-						distanceToTarget = 1;
+						distanceToTarget = 0.6f;
 					else
 						distanceToTarget /= 8;
 
-					audioRocket.volume = 1 - distanceToTarget; // this works as a linear function, while the 3D sound works like a logarithmic function, so the effect will be a little different (correct me if I'm wrong)
+					audioRocket.volume = 0.6f - distanceToTarget; // this works as a linear function, while the 3D sound works like a logarithmic function, so the effect will be a little different (correct me if I'm wrong)
 
 					//yield return new WaitForSeconds (0.02f); // this will adjust the volume based on distance every 1 second (Obviously, You can reduce this to a lower value if you want more updates per second)
 

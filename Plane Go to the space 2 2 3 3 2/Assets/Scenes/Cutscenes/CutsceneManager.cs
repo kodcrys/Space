@@ -137,6 +137,8 @@ public class CutsceneManager : MonoBehaviour {
 	public void SkipButton(){
 		FadeInManager.instance.fadeOut.enabled = true;
 		FadeInManager.instance.fadeOut.GetComponent<CanvasGroup> ().blocksRaycasts = true;
+		SoundManager.Intance.MuteSoundCutScene1BG ();
+		SoundManager.Intance.MuteSoundCutScene2BG ();
 	}
 
 	void NextScene(string namescene){
