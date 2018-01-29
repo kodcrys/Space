@@ -18,6 +18,13 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Start(){
+		if (MultiResolution.device == "iphone") {
+			opGame.X2ButtonAnim = opGame.X2ButtonIphone;
+		} else if (MultiResolution.device == "ipad") {
+			opGame.X2ButtonAnim = opGame.X2ButtonIpap;
+		} else {
+			opGame.X2ButtonAnim = opGame.X2ButtonIphoneX;
+		}
 		opGame.gameDone = false;
 		opGame.chooseWhat = 0;
 		opGame.totalTime = 15f;
@@ -44,6 +51,7 @@ public class GameManager : MonoBehaviour {
 		} else if (opGame.chooseWhat == 2) {
 			OkContinueActive ();
 		}
+		OnApplicationQuit ();
 	}
 
 	void ButtonCheckInternet(){
@@ -229,8 +237,12 @@ public class GameManager : MonoBehaviour {
 			if (opGame.timer >= opGame.timeInter) {
 				if (SaveManager.instance.state.coin < SaveManager.instance.state.storage) {
 					SaveManager.instance.state.coin += SaveManager.instance.state.timeCoin;
-					SaveManager.instance.Save ();
 				}
+				else {
+					// Khien tien luon luon bang hoac nho hon dung luong tien
+					SaveManager.instance.state.coin = SaveManager.instance.state.storage;
+				}
+				SaveManager.instance.Save ();
 				opGame.timer = 0;
 			}
 		}
@@ -303,6 +315,7 @@ public class GameManager : MonoBehaviour {
 	public void X2Button(){
 		if (opGame.isX2Time == false) {
 			opGame.isX2Time = true;
+			StaticOption.isBitcoinScene = true;
 			GGAmob.Intance.ShowRewardBasedVideo ();
 		}
 		GGAmob.Intance.isRunx2Money = true;
@@ -323,7 +336,7 @@ public class GameManager : MonoBehaviour {
 		}
 
 		if (SaveManager.instance.state.isSawAds == true) {
-			opGame.X2ButtonAnim.interactable = false;
+			opGame.X2ButtonAnim.enabled = false;
 			if (opGame.timer >= opGame.timeInter) {
 				if (opGame.X2ButtonAnim.image.fillAmount >= 0f) {
 					SaveManager.instance.state.timeCountdown += (1f / opGame.timeAdsX2Colddown);
@@ -343,7 +356,7 @@ public class GameManager : MonoBehaviour {
 	private void OnApplicationQuit(){
 		opGame.timer += Time.deltaTime;
 		if (SaveManager.instance.state.isSawAds == true) {
-			opGame.X2ButtonAnim.interactable = false;
+			opGame.X2ButtonAnim.enabled = false;
 			if (opGame.timer >= opGame.timeInter) {
 				if (opGame.X2ButtonAnim.image.fillAmount >= 0f) {
 					SaveManager.instance.state.timeCountdown += (1f / opGame.timeAdsX2Colddown);
@@ -375,8 +388,10 @@ public class GameManager : MonoBehaviour {
 	IEnumerator waitForEndX2(float time){
 		yield return new WaitForSeconds (time);
 		opGame.x2Score = 1;
+		StaticOption.isBitcoinScene = false;
 		GGAmob.Intance.rewardedCoin = false;
 		SaveManager.instance.state.isSawAds = true;
+		SaveManager.instance.Save ();
 	}
 }
 
@@ -403,7 +418,7 @@ public class GameOption {
 
 	public GameObject coinRain, continuePanel;
 
-	public UnityEngine.UI.Button X2ButtonAnim;
+	public UnityEngine.UI.Button X2ButtonAnim , X2ButtonIpap, X2ButtonIphoneX, X2ButtonIphone;
 
 	public UnityEngine.UI.Text textCoinConinute;
 
@@ -435,5 +450,6 @@ public static class StaticOption{
 	public static bool isEffectDone = false;
 	public static int limitTimeBonus = 5;
 	public static bool isiAp = false;
+	public static bool isBitcoinScene = false;
 }
 

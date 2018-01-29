@@ -366,7 +366,8 @@ public class GGAmob : MonoBehaviour {
 	{
 		string type = args.Type;
 		double amount = args.Amount;
-		isAllowReward = true;
+		if (StaticOption.isBitcoinScene == true)
+			isAllowReward = true;
 		MonoBehaviour.print(
 		"HandleRewardBasedVideoRewarded event received for " + amount.ToString() + " " + type);
 	}

@@ -15632,7 +15632,10 @@ MonoBehaviour:
     fadeOut: {fileID: 1371530796}
     coinRain: {fileID: 1576188468601906, guid: 15dff42ad7aa040b9bb8911dd5c235c9, type: 2}
     continuePanel: {fileID: 325751449}
-    X2ButtonAnim: {fileID: 1532626822}
+    X2ButtonAnim: {fileID: 0}
+    X2ButtonIpap: {fileID: 670269627}
+    X2ButtonIphoneX: {fileID: 1725463560}
+    X2ButtonIphone: {fileID: 1532626822}
     textCoinConinute: {fileID: 545626069}
     coinSafe:
     - {fileID: 798743695}
