@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrailData:
     TrailMaterial: {fileID: 2100000, guid: 36c272970a343a24cbd74022d095bf4e, type: 2}
-    Lifetime: 5
+    Lifetime: 10
     UsingSimpleSize: 0
     SimpleSizeOverLifeStart: 0
     SimpleSizeOverLifeEnd: 0
@@ -160,20 +160,20 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0
-        value: 0
+        time: 0.00048446655
+        value: 0.0014038086
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.13346413
-        value: 0.048463076
+        time: 0.13247228
+        value: 0.04822275
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       - serializedVersion: 2
-        time: 1
-        value: 0
+        time: 0.49750483
+        value: 0.00054625794
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
     ColorOverLife:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 0}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 0.78431374}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -201,8 +201,8 @@ MonoBehaviour:
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 193
-      atime1: 12529
+      atime0: 0
+      atime1: 12336
       atime2: 65535
       atime3: 65535
       atime4: 0
@@ -219,9 +219,9 @@ MonoBehaviour:
     ForwardOverride: {x: 0, y: 0, z: 0}
     ForwardOverrideRelative: 0
   Emit: 1
-  MinControlPointDistance: 3
-  MaxControlPoints: 30
-  PointsBetweenControlPoints: 4
+  MinControlPointDistance: 1
+  MaxControlPoints: 100
+  PointsBetweenControlPoints: 1
 --- !u!114 &114423622915147886
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -16,6 +16,7 @@ public class CountdownDestroy : MonoBehaviour {
 	float delay;
 	[SerializeField] 
 	int numberPrefab;
+
 	// 1-p count the time run the function HideandShow
 	int count = 0;
 
@@ -66,11 +67,11 @@ public class CountdownDestroy : MonoBehaviour {
 	void DestroyRocket()
 	{
 		// Set active for the affect here.
-			PoolManager.Intance.lstPool [numberPrefab].getindex ();
-			PoolManager.Intance.lstPool [numberPrefab].GetPoolObject ().transform.position = transform.position;
-			PoolManager.Intance.lstPool [numberPrefab].GetPoolObject ().transform.rotation = transform.rotation;
-			PoolManager.Intance.lstPool [numberPrefab].GetPoolObject ().SetActive (true);
-
+		PoolManager.Intance.lstPool [numberPrefab].getindex ();
+		PoolManager.Intance.lstPool [numberPrefab].GetPoolObject ().transform.position = transform.position;
+		PoolManager.Intance.lstPool [numberPrefab].GetPoolObject ().transform.rotation = transform.rotation;
+		PoolManager.Intance.lstPool [numberPrefab].GetPoolObject ().SetActive (true);
+		SoundManager.Intance.PlayExpSound ();
 		// Hide the rocket on the screen.
 		transform.gameObject.SetActive (false);
 	}

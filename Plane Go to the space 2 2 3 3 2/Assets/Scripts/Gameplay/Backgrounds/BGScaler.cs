@@ -8,7 +8,7 @@ public class BGScaler : MonoBehaviour {
 	// Use this for initialization
 	void Update () {
 		// Get the height resolution
-		var worldHeight = Camera.main.orthographicSize * 6;
+		var worldHeight = Camera.main.orthographicSize * 10;
 		// Get the width resolution
 		var worldWidth = worldHeight * Screen.width / Screen.height;
 

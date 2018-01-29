@@ -18,6 +18,7 @@ public class HomingMissile : MonoBehaviour {
 	// 2-p The speed and rotation of the rocket
 	[SerializeField]
 	private float speed, rotateSpeed, div;
+
 	[SerializeField]
 	private int ExplosionPrefab;
 
