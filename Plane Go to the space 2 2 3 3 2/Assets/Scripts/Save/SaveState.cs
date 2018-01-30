@@ -1,7 +1,7 @@
 ﻿public class SaveState {
 
 	// All money
-	public long money = 1000000;
+	public long money = 0;
 
 	// Coin
 	public long coin = 0;

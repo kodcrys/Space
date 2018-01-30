@@ -17,5 +17,6 @@ public class BGScaler : MonoBehaviour {
 		Vector3 temp = Camera.main.transform.position;
 		temp.z = 0f;
 		transform.position = temp;
+		transform.rotation = Camera.main.transform.rotation;
 	}
 }
