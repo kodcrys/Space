@@ -209,14 +209,20 @@ public class UpgradeButton : MonoBehaviour {
 		updateGame.money = SaveManager.instance.state.money;
 		if (updateGame.coin >= updateGame.price) {
 			updateGame.priceImage.sprite = updateGame.canBuy;
+			updateGame.coinUpdateText.color = new Color32 (0, 0, 0, 255);
+			updateGame.iconImage.sprite = updateGame.iconBlack;
 			CanBuyAnim.canBuyItem = true;
 			updateGame.canBuyAnimtion.GetComponent<Image> ().enabled = true;
 		} else if (updateGame.coin < updateGame.price && (updateGame.coin + updateGame.money) >= updateGame.price) {
 			updateGame.priceImage.sprite = updateGame.canBuy;
+			updateGame.coinUpdateText.color = new Color32 (0, 0, 0, 255);
+			updateGame.iconImage.sprite = updateGame.iconBlack;
 			CanBuyAnim.canBuyItem = true;
 			updateGame.canBuyAnimtion.GetComponent<Image> ().enabled = true;
 		} else {
 			updateGame.priceImage.sprite = updateGame.cantBuy;
+			updateGame.coinUpdateText.color = new Color32 (255, 255, 255, 255);
+			updateGame.iconImage.sprite = updateGame.iconWhite;
 			CanBuyAnim.canBuyItem = false;
 			updateGame.canBuyAnimtion.GetComponent<Image> ().enabled = false;
 		}
@@ -236,9 +242,9 @@ public class UpdateOption {
 
 	public Text levelUpdateText, coinUpdateText, updateEffectText;
 
-	public Sprite cantBuy, canBuy;
+	public Sprite cantBuy, canBuy , iconBlack, iconWhite;
 
-	public Image priceImage;
+	public Image priceImage ,iconImage;
 
 	public GameObject canBuyAnimtion;
 }

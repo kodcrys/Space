@@ -1920,7 +1920,10 @@ MonoBehaviour:
     updateEffectText: {fileID: 1035164871}
     cantBuy: {fileID: 21300000, guid: e9238015be9f24c34b314426d9c59ba3, type: 3}
     canBuy: {fileID: 21300000, guid: 015c33c7e579f4a34b4a38677baa4902, type: 3}
+    iconBlack: {fileID: 21300000, guid: 2b459a411191144848f0a4cce8e74437, type: 3}
+    iconWhite: {fileID: 21300000, guid: 1dc6125b7c129485186ceb990bcd057a, type: 3}
     priceImage: {fileID: 718202332}
+    iconImage: {fileID: 557022932}
     canBuyAnimtion: {fileID: 1806367722}
 --- !u!114 &222089525
 MonoBehaviour:
@@ -2519,7 +2522,10 @@ MonoBehaviour:
     updateEffectText: {fileID: 1201666276}
     cantBuy: {fileID: 21300000, guid: e9238015be9f24c34b314426d9c59ba3, type: 3}
     canBuy: {fileID: 21300000, guid: 015c33c7e579f4a34b4a38677baa4902, type: 3}
+    iconBlack: {fileID: 21300000, guid: 2b459a411191144848f0a4cce8e74437, type: 3}
+    iconWhite: {fileID: 21300000, guid: 1dc6125b7c129485186ceb990bcd057a, type: 3}
     priceImage: {fileID: 1558649170}
+    iconImage: {fileID: 1811138214}
     canBuyAnimtion: {fileID: 1659461171}
 --- !u!1 &277918122
 GameObject:
@@ -4348,7 +4354,10 @@ MonoBehaviour:
     updateEffectText: {fileID: 27618787}
     cantBuy: {fileID: 21300000, guid: e9238015be9f24c34b314426d9c59ba3, type: 3}
     canBuy: {fileID: 21300000, guid: 015c33c7e579f4a34b4a38677baa4902, type: 3}
+    iconBlack: {fileID: 21300000, guid: 2b459a411191144848f0a4cce8e74437, type: 3}
+    iconWhite: {fileID: 21300000, guid: 1dc6125b7c129485186ceb990bcd057a, type: 3}
     priceImage: {fileID: 2081200624}
+    iconImage: {fileID: 2039062856}
     canBuyAnimtion: {fileID: 1042481643}
 --- !u!1 &409540512
 GameObject:
@@ -4941,7 +4950,10 @@ MonoBehaviour:
     updateEffectText: {fileID: 835292629}
     cantBuy: {fileID: 21300000, guid: e9238015be9f24c34b314426d9c59ba3, type: 3}
     canBuy: {fileID: 21300000, guid: 015c33c7e579f4a34b4a38677baa4902, type: 3}
+    iconBlack: {fileID: 21300000, guid: 2b459a411191144848f0a4cce8e74437, type: 3}
+    iconWhite: {fileID: 21300000, guid: 1dc6125b7c129485186ceb990bcd057a, type: 3}
     priceImage: {fileID: 1721506740}
+    iconImage: {fileID: 1926904283}
     canBuyAnimtion: {fileID: 1630216248}
 --- !u!114 &466003370
 MonoBehaviour:
@@ -5398,7 +5410,10 @@ MonoBehaviour:
     updateEffectText: {fileID: 1164896865}
     cantBuy: {fileID: 21300000, guid: e9238015be9f24c34b314426d9c59ba3, type: 3}
     canBuy: {fileID: 21300000, guid: 015c33c7e579f4a34b4a38677baa4902, type: 3}
+    iconBlack: {fileID: 21300000, guid: 2b459a411191144848f0a4cce8e74437, type: 3}
+    iconWhite: {fileID: 21300000, guid: 1dc6125b7c129485186ceb990bcd057a, type: 3}
     priceImage: {fileID: 749904743}
+    iconImage: {fileID: 1065831910}
     canBuyAnimtion: {fileID: 631864759}
 --- !u!114 &515672257
 MonoBehaviour:
@@ -7836,7 +7851,10 @@ MonoBehaviour:
     updateEffectText: {fileID: 1351471700}
     cantBuy: {fileID: 21300000, guid: e9238015be9f24c34b314426d9c59ba3, type: 3}
     canBuy: {fileID: 21300000, guid: 015c33c7e579f4a34b4a38677baa4902, type: 3}
+    iconBlack: {fileID: 21300000, guid: 2b459a411191144848f0a4cce8e74437, type: 3}
+    iconWhite: {fileID: 21300000, guid: 1dc6125b7c129485186ceb990bcd057a, type: 3}
     priceImage: {fileID: 415191831}
+    iconImage: {fileID: 1098336369}
     canBuyAnimtion: {fileID: 174268803}
 --- !u!1 &749904741
 GameObject:
@@ -9060,7 +9078,10 @@ MonoBehaviour:
     updateEffectText: {fileID: 1227959649}
     cantBuy: {fileID: 21300000, guid: e9238015be9f24c34b314426d9c59ba3, type: 3}
     canBuy: {fileID: 21300000, guid: 015c33c7e579f4a34b4a38677baa4902, type: 3}
+    iconBlack: {fileID: 21300000, guid: 2b459a411191144848f0a4cce8e74437, type: 3}
+    iconWhite: {fileID: 21300000, guid: 1dc6125b7c129485186ceb990bcd057a, type: 3}
     priceImage: {fileID: 1937253268}
+    iconImage: {fileID: 1833152260}
     canBuyAnimtion: {fileID: 548796243}
 --- !u!114 &870556538
 MonoBehaviour:
@@ -9789,7 +9810,10 @@ MonoBehaviour:
     updateEffectText: {fileID: 1949468466}
     cantBuy: {fileID: 21300000, guid: e9238015be9f24c34b314426d9c59ba3, type: 3}
     canBuy: {fileID: 21300000, guid: 015c33c7e579f4a34b4a38677baa4902, type: 3}
+    iconBlack: {fileID: 21300000, guid: 2b459a411191144848f0a4cce8e74437, type: 3}
+    iconWhite: {fileID: 21300000, guid: 1dc6125b7c129485186ceb990bcd057a, type: 3}
     priceImage: {fileID: 991438546}
+    iconImage: {fileID: 1832407274}
     canBuyAnimtion: {fileID: 1185117305}
 --- !u!1 &939712982
 GameObject:
@@ -10613,7 +10637,10 @@ MonoBehaviour:
     updateEffectText: {fileID: 1290916011}
     cantBuy: {fileID: 21300000, guid: e9238015be9f24c34b314426d9c59ba3, type: 3}
     canBuy: {fileID: 21300000, guid: 015c33c7e579f4a34b4a38677baa4902, type: 3}
+    iconBlack: {fileID: 21300000, guid: 2b459a411191144848f0a4cce8e74437, type: 3}
+    iconWhite: {fileID: 21300000, guid: 1dc6125b7c129485186ceb990bcd057a, type: 3}
     priceImage: {fileID: 2136112316}
+    iconImage: {fileID: 114509915}
     canBuyAnimtion: {fileID: 1980604716}
 --- !u!114 &1038393188
 MonoBehaviour:
@@ -15826,7 +15853,10 @@ MonoBehaviour:
     updateEffectText: {fileID: 2099630250}
     cantBuy: {fileID: 21300000, guid: e9238015be9f24c34b314426d9c59ba3, type: 3}
     canBuy: {fileID: 21300000, guid: 015c33c7e579f4a34b4a38677baa4902, type: 3}
+    iconBlack: {fileID: 21300000, guid: 2b459a411191144848f0a4cce8e74437, type: 3}
+    iconWhite: {fileID: 21300000, guid: 1dc6125b7c129485186ceb990bcd057a, type: 3}
     priceImage: {fileID: 445167789}
+    iconImage: {fileID: 1437039733}
     canBuyAnimtion: {fileID: 1433650419}
 --- !u!114 &1232837573
 MonoBehaviour:
@@ -22321,7 +22351,10 @@ MonoBehaviour:
     updateEffectText: {fileID: 350745910}
     cantBuy: {fileID: 21300000, guid: e9238015be9f24c34b314426d9c59ba3, type: 3}
     canBuy: {fileID: 21300000, guid: 015c33c7e579f4a34b4a38677baa4902, type: 3}
+    iconBlack: {fileID: 21300000, guid: 2b459a411191144848f0a4cce8e74437, type: 3}
+    iconWhite: {fileID: 21300000, guid: 1dc6125b7c129485186ceb990bcd057a, type: 3}
     priceImage: {fileID: 1244274329}
+    iconImage: {fileID: 579129105}
     canBuyAnimtion: {fileID: 1882534770}
 --- !u!114 &1632570550
 MonoBehaviour:
@@ -22909,7 +22942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -140.25003, y: 0}
+  m_AnchoredPosition: {x: -140.25, y: 0}
   m_SizeDelta: {x: 280.5, y: 314.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1706112558
@@ -22940,7 +22973,10 @@ MonoBehaviour:
     updateEffectText: {fileID: 1563813799}
     cantBuy: {fileID: 21300000, guid: e9238015be9f24c34b314426d9c59ba3, type: 3}
     canBuy: {fileID: 21300000, guid: 015c33c7e579f4a34b4a38677baa4902, type: 3}
+    iconBlack: {fileID: 21300000, guid: 2b459a411191144848f0a4cce8e74437, type: 3}
+    iconWhite: {fileID: 21300000, guid: 1dc6125b7c129485186ceb990bcd057a, type: 3}
     priceImage: {fileID: 390849457}
+    iconImage: {fileID: 606023239}
     canBuyAnimtion: {fileID: 413613727}
 --- !u!114 &1706112559
 MonoBehaviour:
