@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour {
 
 	void Update(){
 		ParameterUpdate ();
+		TimeCoin();
 		X2Active ();
 		SkipActive ();
 		SkipNextScene ();
@@ -145,9 +146,6 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 
-		// Time coin
-		TimeCoin();
-
 		// Change coin text
 		opGame.coinText.text = AbbrevationUtility.FormatNumber(SaveManager.instance.state.coin) + " / " + AbbrevationUtility.FormatNumber(SaveManager.instance.state.storage);
 		opGame.coinTextX.text = AbbrevationUtility.FormatNumber(SaveManager.instance.state.coin) + " / " + AbbrevationUtility.FormatNumber(SaveManager.instance.state.storage);
@@ -167,7 +165,12 @@ public class GameManager : MonoBehaviour {
 		opGame.limitBonusX.text = StaticOption.limitTimeBonus + " / 5";
 		opGame.limitBonusIpad.text = StaticOption.limitTimeBonus + " / 5";
 
-		opGame.timer += Time.deltaTime;
+
+		if (opGame.timer >= opGame.timeInter) {
+			opGame.timer = 0;
+		} else {
+			opGame.timer += Time.deltaTime;
+		}
 	}
 
 	void CountdownTime(){
@@ -244,7 +247,6 @@ public class GameManager : MonoBehaviour {
 					Debug.Log (1);
 				}
 				SaveManager.instance.Save ();
-				opGame.timer = 0;
 			}
 		}
 	}
@@ -329,7 +331,6 @@ public class GameManager : MonoBehaviour {
 				if (opGame.X2ButtonAnim.image.fillAmount <= 1f) {
 					opGame.X2ButtonAnim.image.fillAmount -= 0.1f;
 				}
-				opGame.timer = 0;
 			}	
 			StartCoroutine (waitForEndX2 (10f));
 		} else {
@@ -349,7 +350,6 @@ public class GameManager : MonoBehaviour {
 					SaveManager.instance.state.timeCountdown = 0;
 					SaveManager.instance.Save ();
 				}
-				opGame.timer = 0;
 			}
 		}
 	}
@@ -369,7 +369,6 @@ public class GameManager : MonoBehaviour {
 					SaveManager.instance.state.timeCountdown = 0;
 					SaveManager.instance.Save ();
 				}
-				opGame.timer = 0;
 			}
 		}
 	}
