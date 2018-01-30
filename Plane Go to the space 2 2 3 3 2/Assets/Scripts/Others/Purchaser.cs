@@ -240,8 +240,8 @@ public class Purchaser : MonoBehaviour, IStoreListener {
 			// The first phase of restoration. If no more responses are received on ProcessPurchase then 
 			// no purchases are available to be restored.
 			if (result) {
-				SaveManager.instance.state.isPurchaseRemoveAds = true;
-				SaveManager.instance.Save ();
+				//SaveManager.instance.state.isPurchaseRemoveAds = true;
+				//SaveManager.instance.Save ();
 			}
 			Debug.Log ("RestorePurchases continuing: " + result + ". If no further messages, no purchases available to restore.");
 		});
