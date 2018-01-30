@@ -51,7 +51,6 @@ public class GameManager : MonoBehaviour {
 		} else if (opGame.chooseWhat == 2) {
 			OkContinueActive ();
 		}
-		OnApplicationQuit ();
 	}
 
 	void ButtonCheckInternet(){
