@@ -236,10 +236,12 @@ public class GameManager : MonoBehaviour {
 			if (opGame.timer >= opGame.timeInter) {
 				if (SaveManager.instance.state.coin < SaveManager.instance.state.storage) {
 					SaveManager.instance.state.coin += SaveManager.instance.state.timeCoin;
+					Debug.Log (SaveManager.instance.state.coin + " " + SaveManager.instance.state.timeCoin);
 				}
 				else {
 					// Khien tien luon luon bang hoac nho hon dung luong tien
 					SaveManager.instance.state.coin = SaveManager.instance.state.storage;
+					Debug.Log (1);
 				}
 				SaveManager.instance.Save ();
 				opGame.timer = 0;
