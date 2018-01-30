@@ -117,7 +117,10 @@ public class PlayerController : BaseCharacter {
 	// Use this for initialization
 	void Start () {
 		// 1. When start the fuel of the plane is full.
-		Fuel = PlaneData.fuelchoosePlane * 2 + 7f;
+		if (SpawnerPool.endless)
+			Fuel = 99999999999f;
+		else
+			Fuel = PlaneData.fuelchoosePlane * 2 + 7f;
 		Speed = PlaneData.speedchoosePlane * 0.5f + 5f;
 		Rotation = PlaneData.rotationchoosePlane + 3;
 		coin = 0;

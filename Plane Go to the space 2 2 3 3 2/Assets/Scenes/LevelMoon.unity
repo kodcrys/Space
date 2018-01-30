@@ -5641,7 +5641,6 @@ GameObject:
   - component: {fileID: 750347181}
   - component: {fileID: 750347180}
   - component: {fileID: 750347182}
-  - component: {fileID: 750347183}
   m_Layer: 0
   m_Name: BG
   m_TagString: Untagged
@@ -5713,17 +5712,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5358762f8dbd4afcacaeb4a5e40cd77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &750347183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 750347179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a08f63b358cca46b38a1dedbc5727fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &757150206
@@ -11728,7 +11716,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 932832216
+  randomSeed: -1492328227
   InitialModule:
     serializedVersion: 3
     enabled: 1
