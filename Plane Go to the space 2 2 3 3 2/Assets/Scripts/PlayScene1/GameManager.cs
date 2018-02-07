@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour {
 		opGame.continuePanel.SetActive (false);
 		StaticOption.isVideoReward = false;
 		opGame.isX2Time = false;
-		opGame.X2ButtonAnim.image.fillAmount = 1f;
+//		opGame.X2ButtonAnim.image.fillAmount = 1f;
 		opGame.timeAdsX2Colddown = SaveManager.instance.state.timeColdDown;
 	}
 
