@@ -344,7 +344,7 @@ public class GameManager : MonoBehaviour {
 					opGame.X2ButtonAnim.image.fillAmount = SaveManager.instance.state.timeCountdown;
 				} else if(opGame.X2ButtonAnim.image.fillAmount == 1) {
 					SaveManager.instance.state.isSawAds = false;
-					opGame.X2ButtonAnim.interactable = true;
+					opGame.X2ButtonAnim.enabled = true;
 					SaveManager.instance.state.timeCountdown = 0;
 					SaveManager.instance.Save ();
 				}
@@ -363,7 +363,7 @@ public class GameManager : MonoBehaviour {
 					opGame.X2ButtonAnim.image.fillAmount = SaveManager.instance.state.timeCountdown;
 				} else if(opGame.X2ButtonAnim.image.fillAmount == 1) {
 					SaveManager.instance.state.isSawAds = false;
-					opGame.X2ButtonAnim.interactable = true;
+					opGame.X2ButtonAnim.enabled = true;
 					SaveManager.instance.state.timeCountdown = 0;
 					SaveManager.instance.Save ();
 				}
