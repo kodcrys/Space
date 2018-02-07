@@ -26,10 +26,13 @@ public class Description : MonoBehaviour {
 	GameObject scroll;
 
 	void Start(){
-		if (MultiResolution.device == "iphonex")
+		if (MultiResolution.device == "iphonex") {
 			scroll.GetComponent<RectTransform> ().localScale = new Vector3 (0.85f, 0.85f, 1);
-		else
+			transform.GetComponent<RectTransform> ().localScale = new Vector3 (0.85f, 0.85f, 1);
+		} else {
 			scroll.GetComponent<RectTransform> ().localScale = new Vector3 (1f, 1f, 1);
+			transform.GetComponent<RectTransform> ().localScale = new Vector3 (1f, 1f, 1);
+		}
 	}
 
 	void Update(){
