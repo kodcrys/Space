@@ -20,6 +20,6 @@ public class MultiResolution : MonoBehaviour {
 			device = "iphone";
 		}
 
-		device = "iphonex";
+		//device = "iphonex";
 	}
 }
