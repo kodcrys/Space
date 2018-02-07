@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour {
 		opGame.continuePanel.SetActive (false);
 		StaticOption.isVideoReward = false;
 		opGame.isX2Time = false;
-//		opGame.X2ButtonAnim.image.fillAmount = 1f;
+		opGame.X2ButtonAnim.image.fillAmount = 1f;
 		opGame.timeAdsX2Colddown = SaveManager.instance.state.timeColdDown;
 	}
 
@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour {
 		} else if (opGame.chooseWhat == 2) {
 			OkContinueActive ();
 		}
+		Debug.Log (SaveManager.instance.state.isSawAds);
 	}
 
 	void ButtonCheckInternet(){
@@ -329,7 +330,8 @@ public class GameManager : MonoBehaviour {
 				if (opGame.X2ButtonAnim.image.fillAmount <= 1f) {
 					opGame.X2ButtonAnim.image.fillAmount -= 0.1f;
 				}
-			}	
+			}
+			opGame.X2ButtonAnim.enabled = false;
 			StartCoroutine (waitForEndX2 (10f));
 		} else {
 			opGame.isX2Time = false;
@@ -338,17 +340,20 @@ public class GameManager : MonoBehaviour {
 		if (SaveManager.instance.state.isSawAds == true) {
 			opGame.X2ButtonAnim.enabled = false;
 			if (opGame.timer >= opGame.timeInter) {
-				if (opGame.X2ButtonAnim.image.fillAmount >= 0f) {
-					SaveManager.instance.state.timeCountdown += (1f / opGame.timeAdsX2Colddown);
-					SaveManager.instance.Save ();
-					opGame.X2ButtonAnim.image.fillAmount = SaveManager.instance.state.timeCountdown;
-				} else if(opGame.X2ButtonAnim.image.fillAmount == 1) {
-					SaveManager.instance.state.isSawAds = false;
-					opGame.X2ButtonAnim.enabled = true;
+				if (SaveManager.instance.state.timeCountdown >= 0f && SaveManager.instance.state.timeCountdown < 1f) {
+					if (!opGame.gameDone) {
+						SaveManager.instance.state.timeCountdown += (1f / opGame.timeAdsX2Colddown);
+						SaveManager.instance.Save ();
+						opGame.X2ButtonAnim.image.fillAmount = SaveManager.instance.state.timeCountdown;
+					}
+				} else if (opGame.X2ButtonAnim.image.fillAmount >= 1f) {
 					SaveManager.instance.state.timeCountdown = 0;
+					SaveManager.instance.state.isSawAds = false;
 					SaveManager.instance.Save ();
 				}
 			}
+		} else {
+			opGame.X2ButtonAnim.enabled = true;
 		}
 	}
 
@@ -357,17 +362,18 @@ public class GameManager : MonoBehaviour {
 		if (SaveManager.instance.state.isSawAds == true) {
 			opGame.X2ButtonAnim.enabled = false;
 			if (opGame.timer >= opGame.timeInter) {
-				if (opGame.X2ButtonAnim.image.fillAmount >= 0f) {
+				if (opGame.X2ButtonAnim.image.fillAmount >= 0f && SaveManager.instance.state.timeCountdown < 1f) {
 					SaveManager.instance.state.timeCountdown += (1f / opGame.timeAdsX2Colddown);
 					SaveManager.instance.Save ();
 					opGame.X2ButtonAnim.image.fillAmount = SaveManager.instance.state.timeCountdown;
-				} else if(opGame.X2ButtonAnim.image.fillAmount == 1) {
-					SaveManager.instance.state.isSawAds = false;
-					opGame.X2ButtonAnim.enabled = true;
+				} else if (opGame.X2ButtonAnim.image.fillAmount >= 1f) {
 					SaveManager.instance.state.timeCountdown = 0;
+					SaveManager.instance.state.isSawAds = false;
 					SaveManager.instance.Save ();
 				}
 			}
+		} else {
+			opGame.X2ButtonAnim.enabled = true;
 		}
 	}
 
